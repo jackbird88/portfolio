@@ -102,7 +102,7 @@
 
 .logoGrid {
   display: flex;
-  justify-content: space-between; /* Space logos equally */
+  justify-content: space-evenly; /* Space logos equally */
   align-items: center;
   flex-wrap: wrap;
   gap: 2rem;

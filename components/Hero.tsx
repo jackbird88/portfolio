@@ -1,22 +1,66 @@
+'use client';
+
+import { useEffect } from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import styles from '../styles/Hero.module.css';
 
 const Hero = () => {
+  useEffect(() => {
+    // Additional client-side logic if needed
+  }, []);
+
   return (
-    <section className={styles.heroContainer}>
-      <div className={styles.gridContainer}>
-        <div className={styles.textContainer}>
+    <motion.section 
+      className={styles.heroContainer}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
+      <motion.div
+        className={styles.gridContainer}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.3 }}
+      >
+        <motion.div
+          className={styles.textContainer}
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+        >
           <div className={styles.introText}>
             <h1>
-              hi,
+              <motion.span
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.5, duration: 0.5 }}
+              >
+                hi,
+              </motion.span>
               <br />
-              I&apos;m Jack
+              <motion.span
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.7, duration: 0.5 }}
+              >
+                I&apos;m Jack
+              </motion.span>
             </h1>
-            <p>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.9, duration: 0.5 }}
+            >
               I will help you build the most impactful projects of your career.
-            </p>
+            </motion.p>
           </div>
-          <div className={styles.curvedArrowContainer}>
+          <motion.div
+            className={styles.curvedArrowContainer}
+            initial={{ opacity: 0, x: -10 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 1.1 }}
+          >
             <svg
               width="100%"
               height="auto"
@@ -40,9 +84,14 @@ const Hero = () => {
                 fill="#e1ff1a"
               />
             </svg>
-          </div>
-        </div>
-        <div className={styles.imageContainer}>
+          </motion.div>
+        </motion.div>
+        <motion.div
+          className={styles.imageContainer}
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+        >
           <Image
             src="/images/myself.jpg?height=800&width=600"
             alt="Hero Photo"
@@ -51,45 +100,82 @@ const Hero = () => {
             height={800}
             priority
           />
-        </div>
-      </div>
-      <div className={styles.trustedByContainer}>
+        </motion.div>
+      </motion.div>
+      <motion.div
+        className={styles.trustedByContainer}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 1.5 }}
+      >
         <div className={styles.logoGrid}>
-          <Image
-            src="/images/RBC-Logo.png"
-            alt="RBC Logo"
-            className={`${styles.logo} ${styles.rbcLogo}`}
-            width={160}
-            height={120}
-            priority
-          />
-          <Image
-            src="/images/petvalu-logo.png"
-            alt="PetValu Logo"
-            className={`${styles.logo} ${styles.petValuLogo}`}
-            width={160}
-            height={120}
-            priority
-          />
-          <Image
-            src="/images/deercreek-logo.png"
-            alt="Deer Creek Logo"
-            className={`${styles.logo} ${styles.deerCreekLogo}`}
-            width={400}
-            height={400}
-            priority
-          />
-          <Image
-            src="/images/western-logo.png"
-            alt="Western Logo"
-            className={`${styles.logo} ${styles.westernLogo}`}
-            width={200}
-            height={200}
-            priority
-          />
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.7, duration: 0.5 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Image
+              src="/images/RBC-Logo.png"
+              alt="RBC Logo"
+              className={`${styles.logo} ${styles.rbcLogo}`}
+              width={160}
+              height={120}
+              priority
+            />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.8, duration: 0.5 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Image
+              src="/images/petvalu-logo.png"
+              alt="PetValu Logo"
+              className={`${styles.logo} ${styles.petValuLogo}`}
+              width={160}
+              height={120}
+              priority
+            />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.9, duration: 0.5 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Image
+              src="/images/deercreek-logo.png"
+              alt="Deer Creek Logo"
+              className={`${styles.logo} ${styles.deerCreekLogo}`}
+              width={400}
+              height={400}
+              priority
+            />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 2.0, duration: 0.5 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Image
+              src="/images/western-logo.png"
+              alt="Western Logo"
+              className={`${styles.logo} ${styles.westernLogo}`}
+              width={200}
+              height={200}
+              priority
+            />
+          </motion.div>
         </div>
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 };
 
