@@ -17,6 +17,15 @@ const Hero = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
+
+    <nav className={styles.navBar}>
+      <div className={styles.navLogo}>JB</div>
+      <div className={styles.hamburgerMenu}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
       <motion.div
         className={styles.gridContainer}
         initial={{ opacity: 0, y: 20 }}
@@ -108,6 +117,9 @@ const Hero = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 1.5 }}
       >
+        <div className={styles.trustedByBox}>
+          Trusted By
+        </div>
         <div className={styles.logoGrid}>
           <motion.div
             initial={{ opacity: 0 }}
