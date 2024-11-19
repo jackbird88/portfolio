@@ -1,5 +1,5 @@
 .container {
-  max-width: 900px; /* Made the form wider */
+  max-width: 900px;
   margin: 3rem auto;
   padding: 3rem;
   background-color: #ffffff;
@@ -59,26 +59,16 @@
   color: #333;
 }
 
-/* Varying line lengths for input fields */
-#name {
-  width: 100%; /* Full width */
-}
-
-#email {
-  width: 80%; /* 80% width */
-}
-
-/* Custom style for the textarea */
 .textarea {
   border: 2px solid #333;
-  border-radius: 8px; /* Rounded corners */
+  border-radius: 8px; 
   outline: none;
   padding: 1rem;
   font-size: 1.2rem;
   font-family: 'Arial', sans-serif;
   color: #333;
   resize: vertical;
-  min-height: 200px; /* Larger height for better appearance */
+  min-height: 200px; 
 }
 
 .textarea:focus {
@@ -87,28 +77,28 @@
 
 .buttonContainer {
   display: flex;
-  justify-content: flex-end; /* Aligns the button to the right */
+  justify-content: flex-end; 
 }
 
 .button {
-  background-color: #333; /* Dark background */
-  color: #fff; /* White text */
-  font-size: 1.2rem; /* Increased button font size */
+  background-color: #333;
+  color: #fff; 
+  font-size: 1.2rem; 
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
-  padding: 0.5rem 1rem; /* Added padding for better click area */
+  padding: 0.5rem 1rem; 
   border: none;
-  border-radius: 8px; /* Rounded corners */
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.1s; /* Smooth hover and active effects */
+  transition: background-color 0.3s, transform 0.1s; 
 }
 
 .button:hover {
   color: #e1ff1a;
 }
 .button:active {
-  transform: scale(0.98); /* Slight shrinking effect when clicked */
+  transform: scale(0.98);
 }
 
 @keyframes fadeIn {
@@ -139,6 +129,6 @@
   padding: 1rem;
   margin-top: 1.5rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  animation: fadeIn 0.5s ease-out, bounce 1s ease-out 1s; /* Combined animations */
+  animation: fadeIn 0.5s ease-out, bounce 1s ease-out 1s;
 }
 
