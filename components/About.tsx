@@ -50,7 +50,7 @@ const About: React.FC = () => {
         <p className={styles.description}>
           These experiences taught me that with imagination, determination, and the right tools, I could bring ideas to life and solve <span className={styles.underlineHighlight}>real-world challenges</span> through technology.
         </p>
-        <a href="#about" className={styles.link}>MORE ABOUT ME</a>
+        <a href="/about" className={styles.link}>MORE ABOUT ME</a>
       </div>
       <div className={styles.imageContainer}>
         <img
