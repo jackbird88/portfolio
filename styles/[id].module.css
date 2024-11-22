@@ -1,0 +1,320 @@
+.container {
+    padding: 32px;
+    background-color: #171717;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    animation: fadeIn 1s ease-in-out;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  }
+
+  .navBar {
+    width: 100%;
+    background-color: #171717;
+    color: #e1ff1a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navLogo {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'serif';
+}
+
+.hamburgerMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.hamburgerMenu span {
+    display: block;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transition: transform 0.3s ease;
+}
+
+.hamburgerMenu:hover span {
+    background-color: #e1ff1a;
+}
+  
+  .projectCard {
+    background-color: #171717;
+    border-radius: 12px;
+    padding: 32px;
+    width: 90%;
+    max-width: 1000px; /* Ensure it doesn't get too large */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+    animation: slideUp 1s ease-in-out;
+    margin: 16px; /* Add spacing for wrapping */
+  }
+  
+  .projectImage {
+    width: 85%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    animation: zoomIn 1.2s ease-in-out;
+  }
+  
+  .projectInfo {
+    text-align: center;
+    margin-bottom: 32px;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  .year {
+    background-color: #c3ff00;
+    color: #1f2937;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 16px;
+    display: inline-block;
+    margin-bottom: 16px;
+    animation: fadeIn 1.8s ease-in-out;
+  }
+  
+  .title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: #ffffff;
+    text-align: left;
+    animation: fadeInTitle 1.2s ease-in-out;
+  }
+  
+  .description {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #ffffff;
+    margin-bottom: 32px;
+    text-align: left;
+    animation: fadeInDescription 1.4s ease-in-out;
+  }
+  
+  .detailsSection,
+  .techSection {
+    margin-top: 32px;
+    text-align: left;
+    animation: slideIn 1.5s ease-in-out;
+  }
+  
+  .sectionTitle {
+    font-size: 22px;
+    font-weight: bold;
+    color: #c3ff00;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    animation: fadeInSectionTitle 1.5s ease-in-out;
+  }
+  
+  .details {
+    font-size: 18px;
+    line-height: 1.9;
+    color: #ffffff;
+    margin-bottom: 24px;
+    padding-left: 20px;
+    animation: fadeInDetails 1.6s ease-in-out;
+  }
+  
+  .techStack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 16px;
+    animation: fadeInStack 2s ease-in-out;
+  }
+  
+  .techItem {
+    background-color: #333;
+    color: #b0b0b0;
+    padding: 10px 16px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    animation: bubblePop 1s ease-in-out;
+  }
+  
+  .pdfViewer {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+    background-color: #1f1f1f;
+    width: 100%; /* Ensure it spans the container */
+    max-width: 100%;
+    height: 700px;
+  }
+  
+  .documentationLink {
+    display: inline-block;
+    background-color: #333;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .documentationLink:hover {
+    color: #c3ff00;
+    background-color: #444;
+    cursor: pointer;
+  }
+  
+  .documentationLink:active {
+    transform: scale(0.98);
+  }
+  
+  /* Media Query for Smaller Screens */
+  @media (max-width: 768px) {
+    .projectCard {
+      width: 100%%; /* Expand to fit smaller screens */
+      padding: 16px;
+    }
+  
+    .title {
+      font-size: 28px;
+    }
+  
+    .description {
+      font-size: 16px;
+    }
+  
+    .pdfViewer {
+      height: 500px; /* Reduce height on smaller screens */
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes zoomIn {
+    from {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInTitle {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInDescription {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInSectionTitle {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInDetails {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInStack {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes bubblePop {
+    from {
+      transform: scale(0.9);
+      opacity: 0.5;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  

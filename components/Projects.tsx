@@ -5,6 +5,7 @@ import styles from '../styles/Projects.module.css';
 import { ArrowUpRight } from 'lucide-react';
 
 interface Project {
+  id: string;
   title: string;
   type: string;
   description: string;
@@ -16,38 +17,42 @@ interface Project {
 
 const projects: Project[] = [
   {
+    id: 'rbc-capstone',
     title: 'RBC Capstone Project',
     type: 'CASE STUDY:',
     description: 'A cutting-edge platform designed to predict quarterly revenue impacted by extreme weather events, enabling proactive financial planning and strategic decision-making.',
     image: '/images/RBC_project.png',
-    link: '#',
+    link: '/projects/rbc-capstone',
     techStack: ['Python', 'MongoDB', 'React', 'Node.js'],
     year: '2024',
   },
   {
+    id: 'golf-cart-management',
     title: 'Golf Cart Management System',
     type: 'CASE STUDY:',
     description: 'A tailored web app for real-time golf cart tracking, enhancing operational efficiency and team communication by monitoring cart movements between the course and pro shop.',
     image: '/images/golf_management.png',
-    link: '#',
+    link: '/projects/golf-cart-management',
     techStack: ['JavaScript', 'React', 'Node.js', 'Render', 'Vercel', 'MongoDB'],
     year: '2023',
   },
   {
+    id: 'sentiment-analysis',
     title: 'Sentiment Analysis Using LSTM Networks for Movie Reviews',
     type: 'CASE STUDY:',
     description: 'A powerful LSTM-based analysis tool designed to predict sentiment in movie reviews, enhancing insights for data-driven decision-making and understanding customer feedback.',
     image: '/images/AI_Project.png',
-    link: '#',
+    link: '/projects/sentiment-analysis',
     techStack: ['Python', 'TensorFlow', 'LSTM', 'NLP', 'Keras'],
     year: '2023',
   },
   {
+    id: 'dice-man',
     title: 'The Chronicles of DICE MAN',
     type: 'CASE STUDY:',
     description: 'Innovative platformer game developed for the GMTK Game Jam 2022, where the protagonist’s abilities are determined by a die roll mechanic.',
     image: '/images/Dice_man.png',
-    link: '#',
+    link: '/projects/dice-man',
     techStack: ['Unity', 'C#', '2D Art', 'Game Design'],
     year: '2022',
   },
