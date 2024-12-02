@@ -1,15 +1,33 @@
 'use client';
 
 import { useEffect } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import styles from '../styles/Hero.module.css';
+import { projectData } from '../app/projects/[id]/page';
+import { experienceData } from '../app/experience/[id]/page';
 
 const Hero = () => {
-  useEffect(() => {
-    // Additional client-side logic if needed
-  }, []);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [projectSubmenuOpen, setProjectSubmenuOpen] = useState(false);
+  const [experienceSubmenuOpen, setExperienceSubmenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen((prev) => !prev);
+  };
+
+  const handleProjectSubmenuToggle = (open: boolean) => {
+    setProjectSubmenuOpen(open);
+  };
+
+  const handleExperienceSubmenuToggle = (open: boolean) => {
+    setExperienceSubmenuOpen(open);
+  };
+
+  type ProjectKeys = keyof typeof projectData;
+  type ExperienceKeys = keyof typeof experienceData;
 
   return (
     <motion.section 
@@ -19,14 +37,60 @@ const Hero = () => {
       transition={{ duration: 1 }}
     >
 
-    <nav className={styles.navBar}>
+<nav className={styles.navBar}>
+<Link href="/" passHref>
       <div className={styles.navLogo}>JB</div>
-      <div className={styles.hamburgerMenu}>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </nav>
+    </Link>
+        <div className={styles.hamburgerMenu} onClick={toggleMenu}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div className={`${styles.menu} ${menuOpen ? styles.menuOpen : ''}`}>
+          <Link href="/about">About</Link>
+          <div
+            className={styles.menuItem}
+            onMouseEnter={() => handleProjectSubmenuToggle(true)}
+            onMouseLeave={() => handleProjectSubmenuToggle(false)}
+          >
+            Projects
+            {projectSubmenuOpen && (
+              <div className={styles.subMenu}>
+                {Object.keys(projectData).map((key) => (
+                  <Link
+                    key={key}
+                    href={`/projects/${key}`}
+                    className={styles.subMenuLink}
+                  >
+                    {projectData[key as ProjectKeys].title}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+          <div
+            className={styles.menuItem}
+            onMouseEnter={() => handleExperienceSubmenuToggle(true)}
+            onMouseLeave={() => handleExperienceSubmenuToggle(false)}
+          >
+            Experiences
+            {experienceSubmenuOpen && (
+              <div className={styles.experiencesSubMenu}>
+                {Object.keys(experienceData).map((key) => (
+                  <Link
+                    key={key}
+                    href={`/experience/${key}`}
+                    className={styles.subMenuLink}
+                  >
+                    {experienceData[key as ExperienceKeys].name}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+          <Link href="#contact">Contact</Link>
+        </div>
+      </nav>
       <motion.div
         className={styles.gridContainer}
         initial={{ opacity: 0, y: 20 }}

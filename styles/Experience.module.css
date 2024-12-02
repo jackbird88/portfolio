@@ -27,45 +27,146 @@
 }
 
 .navBar {
-    width: 100%;
-    background-color: #171717;
-    color: #e1ff1a;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  background-color: #171717; 
+  color: #e1ff1a; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem; 
+  position: fixed; 
+  top: 0;
+  left: 0;
+  z-index: 100; 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.navBar a {
+  color: #e1ff1a; /* Default link color */
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.navBar a:hover {
+  color: #ffffff; /* Change color on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
 }
 
 .navLogo {
-    font-size: 2rem;
-    font-weight: bold;
-    font-family: 'serif';
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'serif';
 }
 
 .hamburgerMenu {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 25px;
-    height: 20px;
-    cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Add a smooth scaling effect */
+}
+
+.hamburgerMenu:hover {
+  transform: scale(1.2) rotate(5deg); /* Slightly enlarge and tilt on hover */
 }
 
 .hamburgerMenu span {
-    display: block;
-    height: 3px;
-    background-color: #ffffff;
-    border-radius: 2px;
-    transition: transform 0.3s ease;
+  display: block;
+  height: 3px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth color and transformation */
 }
 
 .hamburgerMenu:hover span {
-    background-color: #e1ff1a;
+  background-color: #e1ff1a; /* Change color on hover */
+}
+
+.hamburgerMenu:hover span:nth-child(1) {
+  transform: translateY(2px); /* Move slightly down */
+}
+
+.hamburgerMenu:hover span:nth-child(3) {
+  transform: translateY(-2px); /* Move slightly up */
+}
+
+.menu {
+  position: absolute;
+  top: 70px; /* Adjust based on navBar height */
+  right: 2rem;
+  background-color: #171717;
+  color: #ffffff;
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem;
+  gap: 1rem;
+  width: 200px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+
+/* Show menu when active */
+.menuOpen {
+  display: flex;
+}
+
+.menu a:hover {
+  color: #e1ff1a;
+}
+
+.menu a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.5rem; /* Ensure consistent font size */
+}
+
+.menuItem {
+  position: relative;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 1.5rem; /* Add this to ensure the text size matches */
+}
+
+.subMenu {
+  position: absolute;
+  top: 0;
+  left: -225%; /* Position it directly to the left of "Projects" */
+  width: 200px; /* Set a fixed width for the submenu */
+  background-color: #171717;
+  border: 1px solid #e1ff1a;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  z-index: 101;
+}
+
+.subMenuLink {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.subMenuLink:hover {
+  color: #171717;
+}
+
+.experiencesSubMenu {
+  position: absolute;
+  top: 0;
+  left: -150%; /* Position it directly to the left of "Projects" */
+  width: 200px; /* Set a fixed width for the submenu */
+  background-color: #171717;
+  border: 1px solid #e1ff1a;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  z-index: 101;
 }
 
 .main {

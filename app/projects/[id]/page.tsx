@@ -2,9 +2,11 @@
 
 import { useParams } from "next/navigation";
 import Link from "next/link"
+import { useState } from 'react';
 import styles from "../../../styles/[id].module.css";
+import { experienceData } from '..//../experience/[id]/page';
 
-const projectData = {
+export const projectData = {
   "rbc-capstone": {
     title: "RBC Capstone Project",
     description:
@@ -91,6 +93,26 @@ const projectData = {
 };
 
 const ProjectDetails: React.FC = () => {
+
+    const [menuOpen, setMenuOpen] = useState(false);
+    const [projectSubmenuOpen, setProjectSubmenuOpen] = useState(false);
+    const [experienceSubmenuOpen, setExperienceSubmenuOpen] = useState(false);
+  
+    const toggleMenu = () => {
+      setMenuOpen((prev) => !prev);
+    };
+  
+    const handleProjectSubmenuToggle = (open: boolean) => {
+      setProjectSubmenuOpen(open);
+    };
+  
+    const handleExperienceSubmenuToggle = (open: boolean) => {
+      setExperienceSubmenuOpen(open);
+    };
+  
+    type ProjectKeys = keyof typeof projectData;
+    type ExperienceKeys = keyof typeof experienceData;
+  
   const params = useParams();
   const { id } = params as { id: string };
 
@@ -109,14 +131,60 @@ const ProjectDetails: React.FC = () => {
     <div className={styles.container}>
 
       <header className={styles.header}>
-        <nav className={styles.navBar}>
-          <Link href="/" className={styles.navLogo}>JB</Link>
-          <div className={styles.hamburgerMenu}>
-            <span></span>
-            <span></span>
-            <span></span>
+      <nav className={styles.navBar}>
+      <Link href="/" passHref>
+      <div className={styles.navLogo}>JB</div>
+    </Link>
+        <div className={styles.hamburgerMenu} onClick={toggleMenu}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div className={`${styles.menu} ${menuOpen ? styles.menuOpen : ''}`}>
+          <Link href="/about">About</Link>
+          <div
+            className={styles.menuItem}
+            onMouseEnter={() => handleProjectSubmenuToggle(true)}
+            onMouseLeave={() => handleProjectSubmenuToggle(false)}
+          >
+            Projects
+            {projectSubmenuOpen && (
+              <div className={styles.subMenu}>
+                {Object.keys(projectData).map((key) => (
+                  <Link
+                    key={key}
+                    href={`/projects/${key}`}
+                    className={styles.subMenuLink}
+                  >
+                    {projectData[key as ProjectKeys].title}
+                  </Link>
+                ))}
+              </div>
+            )}
           </div>
-        </nav>
+          <div
+            className={styles.menuItem}
+            onMouseEnter={() => handleExperienceSubmenuToggle(true)}
+            onMouseLeave={() => handleExperienceSubmenuToggle(false)}
+          >
+            Experiences
+            {experienceSubmenuOpen && (
+              <div className={styles.experiencesSubMenu}>
+                {Object.keys(experienceData).map((key) => (
+                  <Link
+                    key={key}
+                    href={`/experience/${key}`}
+                    className={styles.subMenuLink}
+                  >
+                    {experienceData[key as ExperienceKeys].name}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+          <Link href="/#contact">Contact</Link>
+        </div>
+      </nav>
       </header>
   <div className={styles.projectCard}>
     <img src={project.image} alt={project.title} className={styles.projectImage} />

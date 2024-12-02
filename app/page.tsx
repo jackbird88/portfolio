@@ -11,7 +11,9 @@ export default function Home() {
         <Quote1 />
         <About />
         <Projects />
-        <Contact />
+        <section id="contact">
+          <Contact />
+        </section>
       </div>
   );
 }
