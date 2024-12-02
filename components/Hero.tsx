@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import styles from '../styles/Hero.module.css';
 
@@ -128,6 +129,7 @@ const Hero = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
+            <Link href="/experience/rbc-royal-bank">
             <Image
               src="/images/RBC-Logo.png"
               alt="RBC Logo"
@@ -136,6 +138,7 @@ const Hero = () => {
               height={120}
               priority
             />
+            </Link>
           </motion.div>
           <motion.div
             initial={{ opacity: 0 }}
@@ -144,6 +147,7 @@ const Hero = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
+            <Link href="/experience/pet-valu">
             <Image
               src="/images/petvalu-logo.png"
               alt="PetValu Logo"
@@ -152,6 +156,7 @@ const Hero = () => {
               height={120}
               priority
             />
+            </Link>
           </motion.div>
           <motion.div
             initial={{ opacity: 0 }}
@@ -160,6 +165,7 @@ const Hero = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
+            <Link href="/experience/deer-creek">
             <Image
               src="/images/deercreek-logo.png"
               alt="Deer Creek Logo"
@@ -168,6 +174,7 @@ const Hero = () => {
               height={400}
               priority
             />
+            </Link>
           </motion.div>
           <motion.div
             initial={{ opacity: 0 }}
@@ -176,6 +183,7 @@ const Hero = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
+            <Link href="/experience/western">
             <Image
               src="/images/western-logo.png"
               alt="Western Logo"
@@ -184,6 +192,7 @@ const Hero = () => {
               height={200}
               priority
             />
+            </Link>
           </motion.div>
         </div>
       </motion.div>
