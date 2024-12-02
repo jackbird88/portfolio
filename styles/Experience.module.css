@@ -198,6 +198,19 @@
   margin-bottom: 24px;
 }
 
+.coursesList {
+  list-style: disc; /* Matches achievements */
+  padding-left: 20px;
+  margin-top: 16px;
+}
+
+.courseItem {
+  font-size: 1rem; /* Matches achievementItem */
+  line-height: 1.8;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
 .section {
   text-align: left;
   margin-bottom: 32px;

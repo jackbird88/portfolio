@@ -40,7 +40,7 @@ const Quote: React.FC = () => {
       className={`${styles.quoteContainer} ${isVisible ? styles.fadeIn : styles.fadeOut}`}
     >
       <p className={styles.quoteText}>
-        In the world of <span className={styles.highlight}>software</span>, the best way to predict the <span className={styles.highlight}>future</span> is to <span className={styles.highlight}>invent it</span>.
+        "In the world of <span className={styles.highlight}>software</span>, the best way to predict the <span className={styles.highlight}>future</span> is to <span className={styles.highlight}>invent it</span>." - Dr. Alan Kay
       </p>
     </section>
   );

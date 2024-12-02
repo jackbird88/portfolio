@@ -42,19 +42,19 @@ const About: React.FC = () => {
       <div className={styles.textContainer}>
         <h1 className={styles.header}>get to know me</h1>
         <p className={styles.subHeader}>
-          Software engineer with a passion for crafting <span className={styles.underlineHighlight}>impactful</span>, human-centered digital solutions. Exciting, right?
+        I’m a <span className={styles.underlineHighlight}>software engineer</span> driven by a passion for creating digital <span className={styles.underlineHighlight}>solutions</span> that make a meaningful impact. Exciting, right?
         </p>
         <p className={styles.description}>
-          Since I was young, I wanted to be an <span className={styles.underlineHighlight}>engineer</span>, starting with building Lego creations like a working vending machine. High school computer science classes solidified that passion, leading me to pursue <span className={styles.underlineHighlight}>software engineering</span>.
+        From building intricate Lego creations as a kid—like a working vending machine—to discovering my <span className={styles.underlineHighlight}>love</span> for programming in high school computer science classes, my journey has always been about bringing <span className={styles.underlineHighlight}>ideas to life</span>.
         </p>
         <p className={styles.description}>
-          These experiences taught me that with imagination, determination, and the right tools, I could bring ideas to life and solve <span className={styles.underlineHighlight}>real-world challenges</span> through technology.
+        These experiences taught me that with creativity, persistence, and the right tools, it’s possible to turn <span className={styles.underlineHighlight}>innovative ideas</span> into solutions that <span className={styles.underlineHighlight}>solve real-world problems</span>.
         </p>
         <a href="/about" className={styles.link}>MORE ABOUT ME</a>
       </div>
       <div className={styles.imageContainer}>
         <img
-          src="/images/aboutMe.jpg" /* Replace this with your image path */
+          src="/images/aboutMe.jpg"
           alt="Profile"
           className={styles.profileImage}
         />

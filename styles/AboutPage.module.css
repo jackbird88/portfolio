@@ -219,17 +219,17 @@
 .bioSection {
     display: flex;
     flex-direction: row-reverse;
-    align-items: flex-start; /* Aligns content to the top */
+    align-items: flex-start; 
     justify-content: space-between;
     background-color: #171717;
     color: #f0f0f0;
-    padding: 2rem; /* Reduce padding */
+    padding: 2rem; 
     border-radius: 12px;
     margin-bottom: 4rem;
-    max-width: 1200px; /* Set a maximum width */
+    max-width: 1200px; 
     margin-left: auto;
     margin-right: auto;
-    gap: 1rem; /* Reduce gap to minimize space */
+    gap: 1rem;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
@@ -252,7 +252,7 @@
     font-weight: bold;
     color: #ffffff;
     margin-bottom: 1rem;
-    text-transform: uppercase;
+    text-transform: none;
 }
 
 .bioText {

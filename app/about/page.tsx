@@ -97,9 +97,9 @@ export default function AboutPage() {
     <div className={styles.contentContainer}>
         <div className={`${styles.heroTextContainer} slide-in`}>
             <h1 className={styles.heroTitle}>
-                Meaningful <span className={styles.questionHighlight}>&ldquo;</span>solutions<span className={styles.questionHighlight}>&rdquo;</span> aren&apos;t always easy to create.
+                meaningful <span className={styles.questionHighlight}>&ldquo;</span>solutions<span className={styles.questionHighlight}>&rdquo;</span> aren&apos;t always easy to create.
             </h1>
-            <p className={`${styles.heroSubtitle} fade-in`}>But with dedication and collaboration, they become possible.</p>
+            <p className={`${styles.heroSubtitle} fade-in`}>but with dedication and collaboration, they become possible.</p>
         </div>
     </div>
 </section>
@@ -116,33 +116,31 @@ export default function AboutPage() {
     </motion.div>
     <div className={styles.bioContent}>
         <h2 className={styles.bioTitle}>
-            So who am I<span className={styles.questionHighlight}>?</span>
+            so who am I<span className={styles.questionHighlight}>?</span>
         </h2>
         <p className={`${styles.bioText} slide-in`}>
-            I’m a <span className={styles.highlight}>software engineer</span> who has always been passionate about 
-            <span className={styles.highlight}> learning</span> and <span className={styles.highlight}>problem-solving</span>.
-            Throughout my journey, I’ve had the privilege of working on <span className={styles.highlight}>projects</span> that 
-            challenged me and allowed me to grow, collaborating with <span className={styles.highlight}>teams</span> and 
-            individuals who shared a drive for creating <span className={styles.highlight}>meaningful work</span>.
-            I understand the importance of <span className={styles.highlight}>listening</span>, adapting, and bringing out 
-            the best in a team to develop solutions that make a difference.
+        I am a <span className={styles.highlight}>software engineer</span> with a strong passion for continuous learning and 
+        solving complex problems. Throughout my career, I have had the privilege of 
+        contributing to <span className={styles.highlight}>challenging projects</span> that fostered growth and collaboration with 
+        dedicated teams focused on delivering <span className={styles.highlight}>impactful solutions</span>. I prioritize active listening, 
+        adaptability, and teamwork to drive <span className={styles.highlight}>success</span> and create meaningful outcomes.
         </p>
         <p className={styles.bioHighlight}>
-            I’m excited to share what I’ve learned and contribute my skills to new 
-            challenges. Now that you’re here, let’s build something great together.
+        I look forward to applying my skills and experiences to tackle new challenges and deliver exceptional results. 
+        Let’s work together to build something remarkable.
         </p>
     </div>
 </section>
 
 <section className={`${styles.additionalContentSection} fade-in`}>
     <div className={`${styles.additionalContent} slide-in`}>
-        <h2 className={styles.additionalTitle}>What Drives Me<span className={styles.questionHighlight}>?</span></h2>
+        <h2 className={styles.additionalTitle}>what drives me<span className={styles.questionHighlight}>?</span></h2>
         <p className={styles.additionalText}>
-            My drive comes from a deep passion for building meaningful solutions through technology. 
-            I find energy in tackling complex challenges, learning from them, and turning them into 
-            opportunities. Collaborating with innovative teams and bringing together diverse ideas 
-            fuels my creativity, allowing me to develop software that truly makes a difference for users 
-            and enhances their experiences.
+        What drives me is a strong passion for creating meaningful solutions through technology. 
+        I thrive on tackling complex challenges, learning from them, and transforming them into 
+        opportunities for growth. Working with innovative teams and bringing together diverse 
+        perspectives sparks my creativity, enabling me to develop software that 
+        truly makes a difference for users and elevates their experiences.
         </p>
     </div>
 </section>

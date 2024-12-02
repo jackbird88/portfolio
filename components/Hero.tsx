@@ -126,7 +126,7 @@ const Hero = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.9, duration: 0.5 }}
             >
-              I will help you build the most impactful projects of your career.
+             i will help you create something extraordinary.
             </motion.p>
           </div>
           <motion.div
