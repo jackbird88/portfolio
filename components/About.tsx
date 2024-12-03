@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import styles from '../styles/About.module.css';
+import Image from 'next/image';
 
 const About: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -53,7 +54,7 @@ const About: React.FC = () => {
         <a href="/about" className={styles.link}>MORE ABOUT ME</a>
       </div>
       <div className={styles.imageContainer}>
-        <img
+        <Image
           src="/images/aboutMe.jpg"
           alt="Profile"
           className={styles.profileImage}
