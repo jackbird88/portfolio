@@ -135,7 +135,7 @@ const Hero = () => {
           >
             <svg
               width="100%"
-              height="auto"
+              height="100%"
               viewBox="0 0 400 100"
               xmlns="http://www.w3.org/2000/svg"
               className={styles.curvedArrow}
@@ -174,7 +174,7 @@ const Hero = () => {
           transition={{ duration: 1, delay: 0.5 }}
         >
           <Image
-            src="/images/myself.jpg?height=800&width=600"
+            src="/images/myself.jpg"
             alt="Hero Photo"
             className={styles.heroImage}
             width={600}
