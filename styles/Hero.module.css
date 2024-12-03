@@ -11,17 +11,17 @@
 
 .navBar {
   width: 100%;
-  background-color: #171717; 
-  color: #e1ff1a; 
+  background-color: #171717;
+  color: #e1ff1a;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem; 
-  position: fixed; 
+  padding: 1rem 2rem;
+  position: fixed;
   top: 0;
   left: 0;
-  z-index: 100; 
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .navBar a {
@@ -39,7 +39,7 @@
 .navLogo {
   font-size: 2rem;
   font-weight: bold;
-  font-family: 'serif';
+  font-family: "serif";
 }
 
 .hamburgerMenu {
@@ -160,7 +160,7 @@
   align-items: center;
   margin: 0;
   padding: 0;
-  position: relative; 
+  position: relative;
 }
 
 /* Styling for the text container */
@@ -170,13 +170,13 @@
   justify-content: space-between;
   padding: 10vw;
   margin: 0;
-  position: relative; 
+  position: relative;
 }
 
 /* Styling for the introductory text */
 .introText h1 {
-  font-family: 'serif';
-  font-size: 8vw; 
+  font-family: "serif";
+  font-size: 8vw;
   font-weight: 500;
   line-height: 1.2;
   color: #333;
@@ -184,8 +184,8 @@
 }
 
 .introText p {
-  max-width: 80%; 
-  font-size: 2.5vw; 
+  max-width: 80%;
+  font-size: 2.5vw;
   margin: 1rem 0 0 0;
   color: #555;
 }
@@ -193,22 +193,23 @@
 /* Arrow container */
 .curvedArrowContainer {
   position: absolute;
-  top: 22%; 
-  left: 65%; 
+  top: 22%;
+  left: 65%;
   transform: rotate(-10deg);
-  width: 60%; 
+  width: 60%;
   height: auto;
-  z-index: 10; 
+  z-index: 10;
 }
 
 /* SVG Arrow Styling */
 .curvedArrow {
   stroke-linecap: round;
-  vector-effect: non-scaling-stroke; 
+  vector-effect: non-scaling-stroke;
   height: auto;
 }
 
-.curvedArrow path, .curvedArrow polygon {
+.curvedArrow path,
+.curvedArrow polygon {
   filter: url(#arrowShadow);
 }
 
@@ -241,21 +242,20 @@
   background-color: #171717;
   color: #a3d977;
   margin: 0;
-  z-index: 2; 
+  z-index: 2;
 }
 
 .trustedByBox {
-  background-color: #e1ff1a; 
-  color: #171717; 
+  background-color: #e1ff1a;
+  color: #171717;
   padding: 0.5rem 1rem;
-  font-size: 1.5vw; 
+  font-size: 1.5vw;
   border-radius: 8px;
-  position: relative; 
-  margin-top: -2rem; 
+  position: relative;
+  margin-top: -2rem;
   text-align: center;
   align-self: flex-start;
 }
-
 
 .logoGrid {
   display: flex;
@@ -282,7 +282,10 @@
 }
 
 /* Individual logo sizes */
-.rbcLogo, .petValuLogo, .deerCreekLogo, .westernLogo {
+.rbcLogo,
+.petValuLogo,
+.deerCreekLogo,
+.westernLogo {
   height: auto;
   filter: brightness(1.5);
   margin: 0 auto;

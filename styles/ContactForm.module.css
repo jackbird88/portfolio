@@ -19,7 +19,7 @@
 }
 
 .title::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: -0.2rem;
@@ -55,20 +55,20 @@
   outline: none;
   padding: 0.75rem 0;
   font-size: 1.2rem;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   color: #333;
 }
 
 .textarea {
   border: 2px solid #333;
-  border-radius: 8px; 
+  border-radius: 8px;
   outline: none;
   padding: 1rem;
   font-size: 1.2rem;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   color: #333;
   resize: vertical;
-  min-height: 200px; 
+  min-height: 200px;
 }
 
 .textarea:focus {
@@ -77,21 +77,21 @@
 
 .buttonContainer {
   display: flex;
-  justify-content: flex-end; 
+  justify-content: flex-end;
 }
 
 .button {
   background-color: #333;
-  color: #fff; 
-  font-size: 1.2rem; 
+  color: #fff;
+  font-size: 1.2rem;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
-  padding: 0.5rem 1rem; 
+  padding: 0.5rem 1rem;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.1s; 
+  transition: background-color 0.3s, transform 0.1s;
 }
 
 .button:hover {
@@ -113,7 +113,8 @@
 }
 
 @keyframes bounce {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -131,4 +132,3 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   animation: fadeIn 0.5s ease-out, bounce 1s ease-out 1s;
 }
-

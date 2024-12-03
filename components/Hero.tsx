@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import styles from '../styles/Hero.module.css';
-import { projectData } from '../app/data/projectData';
-import { experienceData } from '../app/data/experienceData';
+import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import styles from "../styles/Hero.module.css";
+import { projectData } from "../app/data/projectData";
+import { experienceData } from "../app/data/experienceData";
 
 const Hero = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -29,23 +29,22 @@ const Hero = () => {
   type ExperienceKeys = keyof typeof experienceData;
 
   return (
-    <motion.section 
+    <motion.section
       className={styles.heroContainer}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-
-<nav className={styles.navBar}>
-<Link href="/" passHref>
-      <div className={styles.navLogo}>JB</div>
-    </Link>
+      <nav className={styles.navBar}>
+        <Link href="/" passHref>
+          <div className={styles.navLogo}>JB</div>
+        </Link>
         <div className={styles.hamburgerMenu} onClick={toggleMenu}>
           <span></span>
           <span></span>
           <span></span>
         </div>
-        <div className={`${styles.menu} ${menuOpen ? styles.menuOpen : ''}`}>
+        <div className={`${styles.menu} ${menuOpen ? styles.menuOpen : ""}`}>
           <Link href="/about">About</Link>
           <div
             className={styles.menuItem}
@@ -125,7 +124,7 @@ const Hero = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.9, duration: 0.5 }}
             >
-             i will help you create something extraordinary.
+              i will help you create something extraordinary.
             </motion.p>
           </div>
           <motion.div
@@ -142,8 +141,20 @@ const Hero = () => {
               className={styles.curvedArrow}
             >
               <defs>
-                <filter id="arrowShadow" x="-20%" y="-20%" width="150%" height="150%">
-                  <feDropShadow dx="2" dy="4" stdDeviation="3" floodColor="#000000" floodOpacity="0.3" />
+                <filter
+                  id="arrowShadow"
+                  x="-20%"
+                  y="-20%"
+                  width="150%"
+                  height="150%"
+                >
+                  <feDropShadow
+                    dx="2"
+                    dy="4"
+                    stdDeviation="3"
+                    floodColor="#000000"
+                    floodOpacity="0.3"
+                  />
                 </filter>
               </defs>
               <path
@@ -152,10 +163,7 @@ const Hero = () => {
                 strokeWidth="4"
                 fill="none"
               />
-              <polygon
-                points="380,50 400,80 370,80"
-                fill="#e1ff1a"
-              />
+              <polygon points="380,50 400,80 370,80" fill="#e1ff1a" />
             </svg>
           </motion.div>
         </motion.div>
@@ -181,9 +189,7 @@ const Hero = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 1.5 }}
       >
-        <div className={styles.trustedByBox}>
-          Trusted By
-        </div>
+        <div className={styles.trustedByBox}>Trusted By</div>
         <div className={styles.logoGrid}>
           <motion.div
             initial={{ opacity: 0 }}
@@ -193,14 +199,14 @@ const Hero = () => {
             whileTap={{ scale: 0.95 }}
           >
             <Link href="/experience/rbc-royal-bank">
-            <Image
-              src="/images/RBC-Logo.png"
-              alt="RBC Logo"
-              className={`${styles.logo} ${styles.rbcLogo}`}
-              width={160}
-              height={120}
-              priority
-            />
+              <Image
+                src="/images/RBC-Logo.png"
+                alt="RBC Logo"
+                className={`${styles.logo} ${styles.rbcLogo}`}
+                width={160}
+                height={120}
+                priority
+              />
             </Link>
           </motion.div>
           <motion.div
@@ -211,14 +217,14 @@ const Hero = () => {
             whileTap={{ scale: 0.95 }}
           >
             <Link href="/experience/pet-valu">
-            <Image
-              src="/images/petvalu-logo.png"
-              alt="PetValu Logo"
-              className={`${styles.logo} ${styles.petValuLogo}`}
-              width={160}
-              height={120}
-              priority
-            />
+              <Image
+                src="/images/petvalu-logo.png"
+                alt="PetValu Logo"
+                className={`${styles.logo} ${styles.petValuLogo}`}
+                width={160}
+                height={120}
+                priority
+              />
             </Link>
           </motion.div>
           <motion.div
@@ -229,14 +235,14 @@ const Hero = () => {
             whileTap={{ scale: 0.95 }}
           >
             <Link href="/experience/deer-creek">
-            <Image
-              src="/images/deercreek-logo.png"
-              alt="Deer Creek Logo"
-              className={`${styles.logo} ${styles.deerCreekLogo}`}
-              width={400}
-              height={400}
-              priority
-            />
+              <Image
+                src="/images/deercreek-logo.png"
+                alt="Deer Creek Logo"
+                className={`${styles.logo} ${styles.deerCreekLogo}`}
+                width={400}
+                height={400}
+                priority
+              />
             </Link>
           </motion.div>
           <motion.div
@@ -247,14 +253,14 @@ const Hero = () => {
             whileTap={{ scale: 0.95 }}
           >
             <Link href="/experience/western">
-            <Image
-              src="/images/western-logo.png"
-              alt="Western Logo"
-              className={`${styles.logo} ${styles.westernLogo}`}
-              width={200}
-              height={200}
-              priority
-            />
+              <Image
+                src="/images/western-logo.png"
+                alt="Western Logo"
+                className={`${styles.logo} ${styles.westernLogo}`}
+                width={200}
+                height={200}
+                priority
+              />
             </Link>
           </motion.div>
         </div>

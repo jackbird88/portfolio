@@ -1,23 +1,23 @@
 export const projectData = {
-    "rbc-capstone": {
-      title: "RBC Capstone Project",
-      description:
-        "The RBC Capstone Project is an advanced platform designed to forecast quarterly revenue fluctuations caused by extreme weather events. This solution empowers financial teams to make informed decisions by providing actionable insights through data analytics, machine learning, and weather pattern prediction.",
-      techStack: ["Python", "MongoDB", "React", "Node.js"],
-      year: "2024",
-      details: [
-        "The RBC Capstone Project integrates state-of-the-art machine learning algorithms and real-time weather data to analyze and predict potential financial impacts of extreme weather conditions on quarterly revenues.",
-        "Key Features:",
-        "- Predictive Analytics: Accurately forecasts revenue trends based on historical and real-time weather data.",
-        "- Interactive Dashboard: Offers an intuitive user interface built with React, allowing users to explore data visualizations and projections easily.",
-        "- Robust Backend: Built with Node.js and MongoDB for secure data storage and fast performance.",
-        "- Scalable Architecture: Designed to handle large datasets and expand to additional use cases in the future, such as disaster recovery planning or supply chain optimization.",
-        "The project uses machine learning models trained on diverse datasets, including historical financial data, meteorological reports, and economic variables, to deliver high-accuracy predictions.",
-        "Through this system, RBC's financial team can proactively strategize and mitigate risks caused by unpredictable weather events, driving operational efficiency and minimizing revenue losses.",
-      ],
-      image: "/images/RBC_project.png",
-      link: null,
-    },
+  "rbc-capstone": {
+    title: "RBC Capstone Project",
+    description:
+      "The RBC Capstone Project is an advanced platform designed to forecast quarterly revenue fluctuations caused by extreme weather events. This solution empowers financial teams to make informed decisions by providing actionable insights through data analytics, machine learning, and weather pattern prediction.",
+    techStack: ["Python", "MongoDB", "React", "Node.js"],
+    year: "2024",
+    details: [
+      "The RBC Capstone Project integrates state-of-the-art machine learning algorithms and real-time weather data to analyze and predict potential financial impacts of extreme weather conditions on quarterly revenues.",
+      "Key Features:",
+      "- Predictive Analytics: Accurately forecasts revenue trends based on historical and real-time weather data.",
+      "- Interactive Dashboard: Offers an intuitive user interface built with React, allowing users to explore data visualizations and projections easily.",
+      "- Robust Backend: Built with Node.js and MongoDB for secure data storage and fast performance.",
+      "- Scalable Architecture: Designed to handle large datasets and expand to additional use cases in the future, such as disaster recovery planning or supply chain optimization.",
+      "The project uses machine learning models trained on diverse datasets, including historical financial data, meteorological reports, and economic variables, to deliver high-accuracy predictions.",
+      "Through this system, RBC's financial team can proactively strategize and mitigate risks caused by unpredictable weather events, driving operational efficiency and minimizing revenue losses.",
+    ],
+    image: "/images/RBC_project.png",
+    link: null,
+  },
   "golf-cart-management": {
     title: "Golf Cart Management System",
     description:
@@ -38,7 +38,7 @@ export const projectData = {
     link: "/PDFs/Golf_Management.pdf",
     embedPdf: true,
   },
-    "sentiment-analysis": {
+  "sentiment-analysis": {
     title: "Sentiment Analysis Using LSTM Networks for Movie Reviews",
     description:
       "A deep learning-powered tool designed to analyze the sentiments expressed in IMDB movie reviews, leveraging the advanced capabilities of Long Short-Term Memory (LSTM) networks.",
@@ -63,23 +63,23 @@ export const projectData = {
     link: "/PDFs/AI_Final_Project.pdf",
     embedPdf: true,
   },
-    "dice-man": {
-      title: "The Chronicles of DICE MAN",
-      description:
-        "An innovative platformer game developed for the GMTK Game Jam 2022, featuring a unique die roll mechanic that determines the protagonist's abilities.",
-      techStack: ["Unity", "C#", "2D Art", "Game Design"],
-      year: "2022",
-      details: [
-        "The Chronicles of DICE MAN is a 2D platformer game where randomness and strategy blend to create a unique player experience.",
-        "Key Features:",
-        "- Dynamic Gameplay: Player abilities are randomized with every die roll, adding an element of unpredictability and replayability.",
-        "- Immersive Design: Built with Unity, it features visually appealing 2D art and engaging sound effects to immerse players in the game world.",
-        "- Modular Mechanics: Designed with scalable mechanics, allowing future updates to include new abilities, levels, and challenges.",
-        "- Game Jam Success: Developed under a tight deadline for the GMTK Game Jam, showcasing the team's creativity and efficiency.",
-        "This game combines strategic decision-making with skill-based platforming, offering players a challenging yet rewarding experience.",
-      ],
-      image: "/images/Dice_man.png",
-      link: "https://jbird88.itch.io/the-chronicles-of-dice-man",
-      embedPdf: false,
-    },
-  };
+  "dice-man": {
+    title: "The Chronicles of DICE MAN",
+    description:
+      "An innovative platformer game developed for the GMTK Game Jam 2022, featuring a unique die roll mechanic that determines the protagonist's abilities.",
+    techStack: ["Unity", "C#", "2D Art", "Game Design"],
+    year: "2022",
+    details: [
+      "The Chronicles of DICE MAN is a 2D platformer game where randomness and strategy blend to create a unique player experience.",
+      "Key Features:",
+      "- Dynamic Gameplay: Player abilities are randomized with every die roll, adding an element of unpredictability and replayability.",
+      "- Immersive Design: Built with Unity, it features visually appealing 2D art and engaging sound effects to immerse players in the game world.",
+      "- Modular Mechanics: Designed with scalable mechanics, allowing future updates to include new abilities, levels, and challenges.",
+      "- Game Jam Success: Developed under a tight deadline for the GMTK Game Jam, showcasing the team's creativity and efficiency.",
+      "This game combines strategic decision-making with skill-based platforming, offering players a challenging yet rewarding experience.",
+    ],
+    image: "/images/Dice_man.png",
+    link: "https://jbird88.itch.io/the-chronicles-of-dice-man",
+    embedPdf: false,
+  },
+};

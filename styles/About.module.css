@@ -29,7 +29,7 @@
 }
 
 .header {
-  font-family: 'serif';
+  font-family: "serif";
   font-size: 4rem;
   font-weight: 500;
   color: #333;
@@ -37,8 +37,9 @@
   line-height: 1.2;
 }
 
-.subHeader, .description {
-  font-family: 'serif';
+.subHeader,
+.description {
+  font-family: "serif";
   font-size: 1.5rem;
   color: #555;
   max-width: 90%;
@@ -52,7 +53,7 @@
 }
 
 .underlineHighlight::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   right: 0;

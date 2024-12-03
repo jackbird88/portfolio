@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import React, { useEffect, useRef, useState } from 'react';
-import styles from '../styles/Quote.module.css';
+import React, { useEffect, useRef, useState } from "react";
+import styles from "../styles/Quote.module.css";
 
 const Quote: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -37,10 +37,15 @@ const Quote: React.FC = () => {
   return (
     <section
       ref={quoteRef}
-      className={`${styles.quoteContainer} ${isVisible ? styles.fadeIn : styles.fadeOut}`}
+      className={`${styles.quoteContainer} ${
+        isVisible ? styles.fadeIn : styles.fadeOut
+      }`}
     >
       <p className={styles.quoteText}>
-        "In the world of <span className={styles.highlight}>software</span>, the best way to predict the <span className={styles.highlight}>future</span> is to <span className={styles.highlight}>invent it</span>." - Dr. Alan Kay
+        "In the world of <span className={styles.highlight}>software</span>, the
+        best way to predict the <span className={styles.highlight}>future</span>{" "}
+        is to <span className={styles.highlight}>invent it</span>." - Dr. Alan
+        Kay
       </p>
     </section>
   );
