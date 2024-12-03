@@ -9,6 +9,9 @@ const About: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
+    const currentRef = sectionRef.current;
+    if (!currentRef) return;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -20,18 +23,14 @@ const About: React.FC = () => {
         });
       },
       {
-        threshold: 0.5, // Adjust this value as needed
+        threshold: 0.5,
       }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
+    observer.observe(currentRef);
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
+      observer.unobserve(currentRef);
     };
   }, []);
 
@@ -57,6 +56,8 @@ const About: React.FC = () => {
         <Image
           src="/images/aboutMe.jpg"
           alt="Profile"
+          width={600}
+          height={800}
           className={styles.profileImage}
         />
       </div>

@@ -1,13 +1,12 @@
 'use client';
 
-import { useEffect } from 'react';
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import styles from '../styles/Hero.module.css';
-import { projectData } from '../app/projects/[id]/page';
-import { experienceData } from '../app/experience/[id]/page';
+import { projectData } from '../app/data/projectData';
+import { experienceData } from '../app/data/experienceData';
 
 const Hero = () => {
   const [menuOpen, setMenuOpen] = useState(false);

@@ -5,8 +5,8 @@ import Image from "next/image"
 import Link from "next/link"
 import { useState } from 'react';
 import styles from '../../styles/AboutPage.module.css'
-import { projectData } from '../projects/[id]/page';
-import { experienceData } from '../experience/[id]/page';
+import { projectData } from '../data/projectData';
+import { experienceData } from '../data/experienceData';
 
 export default function AboutPage() {
 
